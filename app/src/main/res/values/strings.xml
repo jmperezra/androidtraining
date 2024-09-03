@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">AndroidTraining2</string>
+
+    <!-- Login Screen -->
+    <string name="label_login">Identificación de Usuarios</string>
+    <string name="label_username">Username</string>
+    <string name="label_password">Password</string>
+    <string name="action_validate">Validar</string>
+
+    <!--  -->
 </resources>
