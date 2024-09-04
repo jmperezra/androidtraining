@@ -8,6 +8,7 @@
     <string name="action_validate">Validar</string>
     <string name="message_login_ok">Las credenciales son correctas</string>
     <string name="message_login_fails">Las credenciales no son correctas</string>
+    <string name="label_remember_username">Recordar el Username</string>
 
     <!--  -->
 </resources>
