@@ -6,6 +6,8 @@
     <string name="label_username">Username</string>
     <string name="label_password">Password</string>
     <string name="action_validate">Validar</string>
+    <string name="message_login_ok">Las credenciales son correctas</string>
+    <string name="message_login_fails">Las credenciales no son correctas</string>
 
     <!--  -->
 </resources>

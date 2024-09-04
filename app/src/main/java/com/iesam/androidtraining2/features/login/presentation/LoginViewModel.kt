@@ -5,8 +5,7 @@ import com.iesam.androidtraining2.features.login.domain.SignInUseCase
 
 class LoginViewModel(private val signInUseCase: SignInUseCase) : ViewModel() {
 
-    fun validateClicked(userName: String, password: String){
-        val isValid = signInUseCase.invoke(userName, password)
+    fun validateClicked(userName: String, password: String): Boolean{
+        return signInUseCase.invoke(userName, password)
     }
-
 }
