@@ -11,4 +11,17 @@ class LoginXmlLocalDataSource (private val context: Context) {
         editor.putString("key_username", username)
         editor.commit()
     }
+
+    fun deleteUserName(){
+        val editor = sharedPref.edit()
+        editor.remove("key_username")
+        editor.commit()
+
+        //Método habitual en Kotlin
+        //Scope Function: apply
+        //sharedPref.edit().apply{
+        //    remove("key_username")
+        //    commit()
+        //}
+    }
 }
