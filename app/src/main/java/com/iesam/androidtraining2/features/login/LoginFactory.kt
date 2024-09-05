@@ -5,6 +5,7 @@ import com.iesam.androidtraining2.features.login.data.LoginDataRepository
 import com.iesam.androidtraining2.features.login.data.local.LoginXmlLocalDataSource
 import com.iesam.androidtraining2.features.login.data.remote.LoginMockRemoteDataSource
 import com.iesam.androidtraining2.features.login.domain.DeleteUsernameUseCase
+import com.iesam.androidtraining2.features.login.domain.GetUsernameUseCase
 import com.iesam.androidtraining2.features.login.domain.LoginRepository
 import com.iesam.androidtraining2.features.login.domain.SaveUsernameUseCase
 import com.iesam.androidtraining2.features.login.domain.SignInUseCase
@@ -14,7 +15,7 @@ class LoginFactory(private val context: Context) {
 
     // Atributos de clase
     private val loginMockRemoteDataSource: LoginMockRemoteDataSource =
-        LoginMockRemoteDataSource()
+        provideLoginMockRemoteDataSource()
 
     private val loginXmlLocalDataSource: LoginXmlLocalDataSource =
         provideLoginXmlLocalDataSource()
@@ -27,10 +28,12 @@ class LoginFactory(private val context: Context) {
 
     private val deleteUsernameUseCase: DeleteUsernameUseCase = provideDeleteUsernameUseCase()
 
+    private val getUsernameUseCase: GetUsernameUseCase = provideGetUsernameUseCase()
+
 
     // Métodos de Clase
     fun provideLoginViewModel(): LoginViewModel {
-        return LoginViewModel(signInUseCase, saveUsernameUseCase, deleteUsernameUseCase)
+        return LoginViewModel(signInUseCase, saveUsernameUseCase, deleteUsernameUseCase, getUsernameUseCase)
     }
 
     private fun provideLoginMockRemoteDataSource(): LoginMockRemoteDataSource {
@@ -55,5 +58,9 @@ class LoginFactory(private val context: Context) {
 
     private fun provideDeleteUsernameUseCase(): DeleteUsernameUseCase {
         return DeleteUsernameUseCase(loginRepository)
+    }
+
+    private fun provideGetUsernameUseCase(): GetUsernameUseCase {
+        return GetUsernameUseCase(loginRepository)
     }
 }
