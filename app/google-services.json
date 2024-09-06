@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "860398290551",
+    "firebase_url": "https://movie-d7432-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "movie-d7432",
+    "storage_bucket": "movie-d7432.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:860398290551:android:9957e137d949f50df3a872",
+        "android_client_info": {
+          "package_name": "com.iesam.androidtraining2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwn80jYqtLFt15zhPatUyckRN2c0CX6F8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
