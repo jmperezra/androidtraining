@@ -1,13 +1,13 @@
 package com.iesam.androidtraining2.features.movies.data
 
 import com.iesam.androidtraining2.features.movies.data.local.MovieDbLocalDataSource
-import com.iesam.androidtraining2.features.movies.data.remote.api.MovieApiRemoteDataSource
+import com.iesam.androidtraining2.features.movies.data.remote.MovieRemoteDataSource
 import com.iesam.androidtraining2.features.movies.domain.Movie
 import com.iesam.androidtraining2.features.movies.domain.MovieRepository
 
 class MovieDataRepository(
     private val localDataSource: MovieDbLocalDataSource,
-    private val remoteDataSource: MovieApiRemoteDataSource
+    private val remoteDataSource: MovieRemoteDataSource
 ) : MovieRepository {
 
     override suspend fun getMovies(): List<Movie> {

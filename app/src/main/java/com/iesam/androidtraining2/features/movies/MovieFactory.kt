@@ -7,8 +7,10 @@ import com.iesam.androidtraining2.app.db.AppDatabase
 import com.iesam.androidtraining2.features.movies.data.MovieDataRepository
 import com.iesam.androidtraining2.features.movies.data.local.MovieDao
 import com.iesam.androidtraining2.features.movies.data.local.MovieDbLocalDataSource
+import com.iesam.androidtraining2.features.movies.data.remote.MovieRemoteDataSource
 import com.iesam.androidtraining2.features.movies.data.remote.api.MovieApiRemoteDataSource
 import com.iesam.androidtraining2.features.movies.data.remote.api.MovieApiService
+import com.iesam.androidtraining2.features.movies.data.remote.db.MovieDbRemoteDataSource
 import com.iesam.androidtraining2.features.movies.domain.GetMoviesUseCase
 import com.iesam.androidtraining2.features.movies.domain.MovieRepository
 import com.iesam.androidtraining2.features.movies.presentation.MoviesViewModel
@@ -28,12 +30,16 @@ class MovieFactory(private val context: Context) {
     private fun provideMovieRepository(): MovieRepository {
         return MovieDataRepository(
             provideMovieDbLocalDataSource(),
-            provideMovieApiRemoteDataSource()
+            provideMovieDbRemoteDataSource()
         )
     }
 
-    private fun provideMovieApiRemoteDataSource(): MovieApiRemoteDataSource {
+    private fun provideMovieApiRemoteDataSource(): MovieRemoteDataSource {
         return MovieApiRemoteDataSource(provideMovieApiService())
+    }
+
+    private fun provideMovieDbRemoteDataSource(): MovieRemoteDataSource {
+        return MovieDbRemoteDataSource(provideFirebaseDataBase())
     }
 
     private fun provideMovieDbLocalDataSource(): MovieDbLocalDataSource {
