@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/medium_spacing">
+
+    <TextView
+        android:id="@+id/label_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Colabora"
+        android:textAlignment="center"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/size_big"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+   <ScrollView
+       app:layout_constraintTop_toBottomOf="@id/label_title"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintBottom_toBottomOf="parent"
+       android:layout_width="0dp"
+       android:layout_height="0dp">
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+           <!-- Row1 -->
+           <ImageView
+               android:id="@+id/img1"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="@dimen/medium_spacing"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               tools:src="@tools:sample/avatars" />
+
+           <TextView
+               android:id="@+id/txt1"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="@dimen/small_spacing"
+               android:text="Hazte Socio"
+               android:textStyle="bold"
+               app:layout_constraintStart_toEndOf="@id/img1"
+               app:layout_constraintTop_toTopOf="@id/img1" />
+
+           <TextView
+               android:id="@+id/txt2"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="@dimen/small_spacing"
+               android:text="Colabora donando una cantidad fija durante X tiempo"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="@id/txt1"
+               app:layout_constraintTop_toBottomOf="@id/txt1" />
+
+           <!-- Row 2 -->
+           <ImageView
+               android:id="@+id/img2"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="@dimen/medium_spacing"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@id/img1"
+               tools:src="@tools:sample/avatars" />
+
+           <TextView
+               android:id="@+id/txt3"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="@dimen/small_spacing"
+               android:text="Hazte Socio"
+               android:textStyle="bold"
+               app:layout_constraintStart_toEndOf="@id/img2"
+               app:layout_constraintTop_toTopOf="@id/img2" />
+
+           <TextView
+               android:id="@+id/txt4"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="@dimen/small_spacing"
+               android:text="Colabora donando una cantidad fija durante X tiempo"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="@id/txt3"
+               app:layout_constraintTop_toBottomOf="@id/txt3" />
+
+           <!-- Row 3 -->
+           <ImageView
+               android:id="@+id/img3"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="@dimen/medium_spacing"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@id/img2"
+               tools:src="@tools:sample/avatars" />
+
+           <TextView
+               android:id="@+id/txt5"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="@dimen/small_spacing"
+               android:text="Hazte Socio"
+               android:textStyle="bold"
+               app:layout_constraintStart_toEndOf="@id/img3"
+               app:layout_constraintTop_toTopOf="@id/img3" />
+
+           <TextView
+               android:id="@+id/txt6"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="@dimen/small_spacing"
+               android:text="Colabora donando una cantidad fija durante X tiempo"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="@id/txt5"
+               app:layout_constraintTop_toBottomOf="@id/txt5" />
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+   </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
