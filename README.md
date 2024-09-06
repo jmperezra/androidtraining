@@ -24,5 +24,3 @@ del curso 2023-2024.
 
 **Contenido**
 - [Presentación de la UT-03](docs/ut3/ut3.pdf)
-
-
