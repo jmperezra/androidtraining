@@ -2,6 +2,7 @@ package com.iesam.androidtraining2.features.movies
 
 import android.content.Context
 import androidx.room.Room
+import com.google.firebase.database.FirebaseDatabase
 import com.iesam.androidtraining2.app.db.AppDatabase
 import com.iesam.androidtraining2.features.movies.data.MovieDataRepository
 import com.iesam.androidtraining2.features.movies.data.local.MovieDao
@@ -60,4 +61,6 @@ class MovieFactory(private val context: Context) {
     private fun provideMovieApiService(): MovieApiService {
         return provideApiClient().create(MovieApiService::class.java)
     }
+
+    fun provideFirebaseDataBase(): FirebaseDatabase = FirebaseDatabase.getInstance()
 }
