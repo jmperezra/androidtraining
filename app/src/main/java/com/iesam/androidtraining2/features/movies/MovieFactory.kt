@@ -6,8 +6,8 @@ import com.iesam.androidtraining2.app.db.AppDatabase
 import com.iesam.androidtraining2.features.movies.data.MovieDataRepository
 import com.iesam.androidtraining2.features.movies.data.local.MovieDao
 import com.iesam.androidtraining2.features.movies.data.local.MovieDbLocalDataSource
-import com.iesam.androidtraining2.features.movies.data.remote.MovieApiRemoteDataSource
-import com.iesam.androidtraining2.features.movies.data.remote.MovieApiService
+import com.iesam.androidtraining2.features.movies.data.remote.api.MovieApiRemoteDataSource
+import com.iesam.androidtraining2.features.movies.data.remote.api.MovieApiService
 import com.iesam.androidtraining2.features.movies.domain.GetMoviesUseCase
 import com.iesam.androidtraining2.features.movies.domain.MovieRepository
 import com.iesam.androidtraining2.features.movies.presentation.MoviesViewModel

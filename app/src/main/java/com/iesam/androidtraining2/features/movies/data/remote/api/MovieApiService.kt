@@ -1,4 +1,4 @@
-package com.iesam.androidtraining2.features.movies.data.remote
+package com.iesam.androidtraining2.features.movies.data.remote.api
 
 import com.iesam.androidtraining2.features.movies.domain.Movie
 import retrofit2.Response

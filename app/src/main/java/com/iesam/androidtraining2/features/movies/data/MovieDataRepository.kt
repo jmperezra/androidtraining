@@ -1,7 +1,7 @@
 package com.iesam.androidtraining2.features.movies.data
 
 import com.iesam.androidtraining2.features.movies.data.local.MovieDbLocalDataSource
-import com.iesam.androidtraining2.features.movies.data.remote.MovieApiRemoteDataSource
+import com.iesam.androidtraining2.features.movies.data.remote.api.MovieApiRemoteDataSource
 import com.iesam.androidtraining2.features.movies.domain.Movie
 import com.iesam.androidtraining2.features.movies.domain.MovieRepository
 
